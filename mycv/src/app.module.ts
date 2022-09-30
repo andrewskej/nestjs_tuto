@@ -22,4 +22,3 @@ import { Report } from './reports/report.entity';
   providers: [AppService],
 })
 export class AppModule {}
-
