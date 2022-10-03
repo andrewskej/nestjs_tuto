@@ -7,9 +7,9 @@ import { User } from './user.entity';
 export class UsersService {
   constructor(@InjectRepository(User) private repo: Repository<User>) {}
 
-  create(email: string, password: string){
+  create(email: string, password: string) {
     const user = this.repo.create({ email, password });
-
+    //if you directly insert {email, password} instead, hooks are not executed -> no logs
     return this.repo.save(user);
   }
 }
