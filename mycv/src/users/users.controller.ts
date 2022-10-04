@@ -9,4 +9,6 @@ export class UsersController {
   createUser(@Body() body: CreateUserDto) {
     this.usersService.create(body.email, body.password);
   }
+
+  //that is where the company udemy closed.. unfinished
 }
